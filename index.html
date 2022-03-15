@@ -12,23 +12,40 @@
 	<!-- NAV -->
 	<nav class="navbar navbar-expand-md bg-dark navbar-dark py-2">
 		<div class="container">
-			<a href="#" class="navbar-brand">Andrew Herubin's GitHub</a>
+			<a href="index.html" class="navbar-brand">Andrew Herubin's GitHub</a>
 			<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navmenu"><span class="navbar-toggler-icon"></span></button>
 			<div class="collapse navbar-collapse" id="navmenu">
 				<ul class="navbar-nav ms-auto">
 					<li class="nav-item">
-						<a href="#" class="nav-link">Projects</a>
+						<a href="projects.html" class="nav-link">Projects</a>
 					</li>
 					<li class="nav-item">
 						<a href="img/resume.pdf" target="_blank" class="nav-link">Resume</a>
 					</li>
 					<li class="nav-item">
-						<a href="#" class="nav-link">Contact Me</a>
+						<a data-bs-toggle="offcanvas" href="#offcanvasContact" class="nav-link">Contact Me</a>
 					</li>
 				</ul>
 			</div>
 		</div>
 	</nav>
+
+    <!-- CONTACT ME OFFCANVAS -->
+    <div class="offcanvas offcanvas-bottom" tabindex="-1" id="offcanvasContact">
+        <div class="offcanvas-header bg-primary text-light">
+            <h2 class="offcanvas-title">Contact Me</h2>
+        </div>
+        <div class="offcanvas-body bg-dark text-light">
+            <p class="lead text-center">
+                Below my Email and LinkedIn are listed, feel free to use either for any questions,
+                comments, concerns, or business inquiries.
+            </p>
+            <div class="container flex text-center">
+                <a href="https://www.linkedin.com/in/andrew-herubin" target="_blank" class="px-2">LinkedIn</a>
+                <a href="mailto:andrewherubin@outlook.com" class="px-2">andrewherubin@outlook.com</a>
+            </div>
+        </div>
+    </div>
 
 	<!-- ABOUT WEBSITE -->
 	<section class="bg-dark text-light p-5 text-center text-sm-start">
