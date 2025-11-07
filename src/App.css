@@ -1,17 +1,116 @@
+/* ------------------ Page Layout ------------------ */
 body {
-  background: #f8f9fa;
+  margin: 0;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #f8f9fa;
   color: #333;
 }
 
-h1, h2, h3 {
+.App {
+  padding: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+/* ------------------ Header ------------------ */
+.header {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.header h1 {
+  margin-bottom: 0.25rem;
   color: #0d6efd;
 }
 
-a {
-  color: #0d6efd;
+h2 {
+  text-align: center;
+  margin-bottom: 1.5rem;
+  color: #222;
+}
+
+/* ------------------ Project Grid (CSS Grid) ------------------ */
+.project-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1.5rem;
+  margin-top: 2rem;
+  justify-items: center; /* center cards horizontally */
+  align-items: stretch;  /* equal height in each row */
+}
+
+
+
+/* ------------------ Project Card Link ------------------ */
+.project-card-link {
   text-decoration: none;
+  color: inherit;
+  display: flex;      /* use flex so card stretches */
+  flex-direction: column;
+  height: 100%;       /* fill the grid cell */
 }
 
-a:hover {
-  text-decoration: underline;
+
+.project-card-link:hover .project-card {
+  transform: translateY(-5px);
+  box-shadow: 0 5px 12px rgba(0, 0, 0, 0.15);
+}
+
+/* ------------------ Project Card ------------------ */
+.project-card {
+  display: flex;
+  flex-direction: column;
+  height: 100%;  /* stretch to fill the parent (link) */
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.1);
+  background-color: white;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+
+/* Card Header (Top Tone) */
+.card-header {
+  background-color: #0d6efd;
+  color: white;
+  padding: 0.8rem 1rem;
+  transition: background-color 0.2s;
+}
+
+.card-header h3 {
+  margin: 0;
+  font-size: 1.1rem;
+}
+
+/* Card Body (Bottom Tone) */
+.card-body {
+  background-color: #f9fafc;
+  padding: 1rem;
+  flex: 1 1 auto; /* expands evenly to fill card */
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.card-body p {
+  margin: 0 0 0.75rem 0;
+  color: #333;
+}
+
+.repo-stats {
+  font-size: 0.9rem;
+  color: #555;
+}
+
+/* ------------------ Hover effect for header ------------------ */
+.project-card-link:hover .card-header {
+  background-color: #0b5ed7; /* slightly darker blue */
+}
+
+/* ------------------ Responsive ------------------ */
+@media (max-width: 768px) {
+  .project-card {
+    max-width: 90%;
+  }
 }
