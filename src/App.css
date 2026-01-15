@@ -231,3 +231,13 @@ main {
   margin-bottom: 0.5rem;
   font-size: 1.15rem;
 }
+
+#contact a {
+  color: #60a5fa;         /* lighter blue that's easier on dark background */
+  text-decoration: underline; /* subtle underline to indicate link */
+  transition: color 0.2s;
+}
+
+#contact a:hover {
+  color: #3b82f6;         /* brighter on hover for interactivity */
+}
